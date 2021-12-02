@@ -1,22 +1,28 @@
 <html lang="eng">
     <%- include("./partials/head.ejs") %> 
-    <body>
-        <%- include("./partials/nav.ejs") %> 
-        <% let fileServer = "http://127.0.0.1:8887" %> 
-        <div class="description">
-            <p>Previous fixes and gallery</p>
-        </div>
-        <div class="images">
-            <ul>
-                <li><img src="<%=fileServer%>/node-crash-course/server1/views/images/IMG_8133.jpg"
-                     width="400" height="400"/></li>
-                <li><img src="<%=fileServer%>/node-crash-course/server1/views/images/IMG_8134.jpg"
-                    width="400" height="400"/></li>
-            </ul>
-        </div>
-    </body>
-    <footer>
-        Copyright &copy; Blog Ninja 2021
-    </footer>
-    <!-- <% include("./partials/footer.ejs") %>  -->
+    <%- include("./partials/nav.ejs") %> 
+    <div class="containers">
+        <body class="main">
+            <% let fileServer = "http://127.0.0.1:8887/node-crash-course/STP_Repairs/server1/views/images/" %> 
+            <div class="images-content">
+                <ul>
+                    <li><img src="<%=fileServer%>/IMG_8133.jpg"
+                        width="400" height="400"/></li>
+                    <li><img src="<%=fileServer%>IMG_8134.jpg"
+                        width="400" height="400"/></li>
+                </ul>
+            </div>
+        </body>
+    </div>
+    <% include("./partials/footer.ejs") %>
+    <style>
+        body {
+            padding:10;
+            background-color: lightgrey;
+        }
+        ul {
+            padding: 20;
+            text-align: center;
+        }
+    </style>
 </html>

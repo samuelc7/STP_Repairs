@@ -12,12 +12,7 @@ app.listen(3000);
 
 // Domain root (Home Page)
 app.get("/", (req, res) => {
-    const blogs = [
-        {title: "Yoshi finds eggs", snippet: "Lorem ipsum dolor sit amet conse"},
-        {title: "Mario finds stars", snippet: "Lorem ipsum dolor sit amet conse..."},
-        {title: "How to defeat bowser", snippet: "Lorem ipsum dolor sit amet conse.."}
-    ]
-    res.render("index", {title: "Home", blogs});
+    res.render("index", {title: "Home"});
 });
 
 // About Page
@@ -29,11 +24,6 @@ app.get("/about-us", (req, res) => {
 app.get("/contact-us", (req, res) => {
     res.render("contact-us", {title: "Contact Us"});
 });
-
-// Contact Us page
-app.get("/contact-us", (req, res) => {
-    res.render("contact", {title: "Contact Us"});
-})
 
 // Previous Fixes / Gallery page
 app.get("/previous-fixes-gallery", (req, res) => {
