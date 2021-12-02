@@ -1,0 +1,49 @@
+<html lang="en">
+    <%- include("./partials/head.ejs") %> 
+    <body>
+        <%- include("./partials/nav.ejs") %> 
+        <div class="content">
+            <form>
+                <div class="row">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="row">
+                    <label for="number">Number:</label>
+                    <input type="text" id="number" required>
+                </div>
+
+                <div class="row">
+                    <label for="email">Email Address:</label>
+                    <input type="text" id="email" required>
+                </div>  
+
+                <div class="row">
+                    <label for="title">Phone Type:</label>
+                    <input type="text" id="title" required>
+                </div>
+
+                <div class="row">
+                    <label for="snippet">Part needing replacement:</label>
+                    <input type="text" id="snippet" required>
+                </div>
+
+                <div class="row">
+                    <label for="body">Additional Information</label>
+                    <textarea id="body" required></textarea>
+                </div>
+
+                <button>Submit</button>
+            </form>
+        </div>
+        <%- include("./partials/footer.ejs") %> 
+    </body>
+    <style>
+        form {
+                margin-top: 5%;
+                }
+        row {
+            padding: 20;
+        }
+    </style>
+</html>
